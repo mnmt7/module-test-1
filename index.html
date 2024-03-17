@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Module Test 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="container">
+      <h1>
+        <div>Rock</div>
+        <div>Paper</div>
+        <div>Scissors</div>
+      </h1>
+
+      <div class="score-container comp-score-container">
+        <div class="score-label">
+          Computer <br />
+          Score
+        </div>
+        <div class="score comp-score">0</div>
+      </div>
+
+      <div class="score-container player-score-container">
+        <div class="score-label">Your<br />Score</div>
+        <div class="score player-score">0</div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="play-btns">
+        <div class="play-btn-container">
+          <button class="play-btn fist-btn" data-choice="0">
+            <img src="img/fist.png" alt="fist" />
+          </button>
+          <div class="line line-fist-to-scissor"></div>
+          <div class="line line-fist-to-hand"></div>
+        </div>
+
+        <div class="play-btn-container">
+          <button class="play-btn scissors-btn" data-choice="1">
+            <img src="img/scissor.png" alt="scissor" />
+          </button>
+          <div class="line line-scissor-to-hand"></div>
+        </div>
+        <button class="play-btn hand-btn" data-choice="2">
+          <img src="img/hand.png" alt="hand" class="hand-img" />
+        </button>
+      </div>
+    </main>
+
+    <div class="result-container hidden container">
+      <div>
+        <p class="choice-text">You picked</p>
+        <div class="player-choice"></div>
+      </div>
+      <div class="result">
+        <p class="result-message-primary"></p>
+        <p class="result-message-secondary">against pc</p>
+        <button class="btn play-again-btn result-play-again-btn">
+          Play again
+        </button>
+      </div>
+      <div>
+        <p class="choice-text">PC picked</p>
+        <div class="comp-choice"></div>
+      </div>
+    </div>
+
+    <div class="winner-container hidden container">
+      <div class="stars">
+        <img src="img/trophy.png" alt="trophy" class="trophy" />
+      </div>
+      <div class="winning-text">
+        <p class="winning-text-header">Hurray!!</p>
+        <p class="winning-text-desc">You won the game</p>
+      </div>
+      <button class="btn play-again-btn">Play again</button>
+    </div>
+
+    <div class="helper-btns-container">
+      <div class="btn-container">
+        <button class="btn rules-btn">Rules</button>
+        <button class="btn next-btn hidden">Next</button>
+      </div>
+      <div class="game-rules-container hidden">
+        <h2 class="game-rules-header">Game Rules</h2>
+        <ul class="game-rules">
+          <li class="game-rule">
+            Rock beats scissors, scissors beat paper, and paper beats rock.
+          </li>
+          <li class="game-rule">
+            Agree ahead of time whether you’ll count off “rock, paper, scissors,
+            shoot” or just “rock, paper, scissors.”
+          </li>
+          <li class="game-rule">
+            Use rock, paper, scissors to settle minor decisions or simply play
+            to pass the time
+          </li>
+          <li class="game-rule">
+            If both players lay down the same hand, each player lays down
+            another hand
+          </li>
+        </ul>
+        <button class="close-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="close-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
